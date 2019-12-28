@@ -2,8 +2,8 @@
   font-family: 'JfFlat';
   font-style: normal;
   font-weight: 400;
-  src: url('/font/JF-Flat-regular.ttf'),
-  url('/font/JF-Flat-regular.woff');
+  src: url(./font/JF-Flat-regular.ttf),
+  url(./font/JF-Flat-regular.woff);
 }
 
 body {
@@ -90,7 +90,7 @@ body, form, div, p, a, img, h1, h2, h3, h4, h5, h6, table, table tr, table td {
     width: 64px;
     display: block;
     height: 64px;
-    background-image: url('/img/icons.png');
+    background-image: url(./img/icons.png);
     background-size: auto 100%;
   }
 
