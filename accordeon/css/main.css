@@ -95,7 +95,7 @@ body, form, div, p, a, img, h1, h2, h3, h4, h5, h6, table, table tr, table td {
   width: 64px;
   display: block;
   height: 64px;
-  background-image: url(../img/icons.png);
+  background-image: url(./img/icons.png);
   background-size: auto 100%;
 }
 
