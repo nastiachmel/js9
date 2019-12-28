@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'JfFlat';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/font/JF-Flat-regular.ttf"), url("/font/JF-Flat-regular.woff");
+}
+
+body {
+  background-color: #f6704b;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+​
+body, form, div, p, a, img, h1, h2, h3, h4, h5, h6, table, table tr, table td {
+  border: none;
+  font-family: 'JfFlat';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.accordeon {
+  padding: 0;
+  margin: 38px auto;
+  list-style: none;
+  width: 378px;
+}
+
+.accordeon li:first-child {
+  background-color: #620808;
+  color: #ffe9c1;
+}
+
+.accordeon li:nth-child(2) {
+  background-color: #a53f3f;
+  color: #f4ce74;
+}
+
+.accordeon li:nth-child(2) .icon {
+  background-position: -64px 0;
+}
+
+.accordeon li:nth-child(3) {
+  background-color: #f4ce74;
+  color: #620808;
+}
+
+.accordeon li:nth-child(3) .icon {
+  background-position: -128px 0;
+}
+
+.accordeon li:nth-child(4) {
+  background-color: #ffe9c1;
+  color: #b76159;
+}
+
+.accordeon li:nth-child(4) .icon {
+  background-position: -192px 0;
+}
+
+.accordeon li:nth-child(5) {
+  background-color: #d5441c;
+  color: #ffe9c1;
+}
+
+.accordeon li:nth-child(5) .icon {
+  background-position: -256px 0;
+}
+
+.head {
+  padding-left: 15px;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.head:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.head .icon {
+  width: 64px;
+  display: block;
+  height: 64px;
+  background-image: url("/img/icons.png");
+  background-size: auto 100%;
+}
+
+.head .title {
+  padding: 30px 0 30px 40px;
+}
+
+.body {
+  display: none;
+  padding: 15px;
+  line-height: 30px;
+  font-size: 18px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
+}
+/*# sourceMappingURL=main.css.map */

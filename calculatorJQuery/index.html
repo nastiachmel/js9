@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+
+</head>
+<body>
+  <div class="calc">
+    <span>Enter first number</span>
+    <input type="text" name="first" class="firstNum">
+    <br>
+    <span>Second number</span>
+    <input type="text" name="sec" class="secondNum">
+    <br>
+    <span>  Select an action: </span>
+    <select class="act">    
+      <option > </option>
+      <option >+</option>
+      <option>-</option>
+      <option >/</option>
+      <option>*</option>
+    </select>
+    <br>
+    <button class="btn">result</button>
+    <input type="text" class="result">
+    <br>
+    <button class="clear">clear</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+
+    $('.btn').click( function () {
+      let first = $('.firstNum').val()*1 ;
+      let act = $('.act').val();
+      let sec = $('.secondNum').val()*1 ;
+      let a;
+
+      if(act == '+'){
+        a= first + sec;
+      } else if(act== '-'){
+        a= first - sec;
+      }else if(act== '*'){
+        a= first * sec;
+      }else if(act== '/'){
+        a= first / sec;
+      }else if(act== ''){
+        alert('Select the action');
+      }
+      $('.result').val(a);
+    })
+
+    $(function() {
+    $('.clear').click(function(){
+      $('input').val('');
+      $('select').val('');
+    });
+  });
+  </script>
+
+</body>
+
+</html>
