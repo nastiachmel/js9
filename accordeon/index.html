@@ -56,15 +56,21 @@
 
   
   <script >
-  $(function () {
-      $('.accordeon .head').on('click', function(){
-        $(this).next().slideToggle();
-        $('.accordeon .head').on('click', function(){    
-          $('.body').hide();      
-          $(this).next().show();
-        })  
-      })
-  });
+  // $(function () {
+  //     $('.accordeon .head').on('click', function(){
+  //       $(this).next().slideToggle();
+  //       $('.accordeon .head').on('click', function(){    
+  //         $('.body').hide();      
+  //         $(this).next().show();
+  //       })  
+  //     })
+  // });
+
+  $('.accordeon .head').on('click', function () {
+    let el= $(this).next();
+    $(".body").not(el).slideUp();
+    el.slideToggle();
+});
 
 
 

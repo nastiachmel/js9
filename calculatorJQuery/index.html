@@ -11,10 +11,10 @@
 <body>
   <div class="calc">
     <span>Enter first number</span>
-    <input type="text" name="first" class="firstNum">
+    <input type="text" name="first" class="firstNum" data-type="number" >
     <br>
     <span>Second number</span>
-    <input type="text" name="sec" class="secondNum">
+    <input type="text" name="sec" class="secondNum" data-type="number">
     <br>
     <span>  Select an action: </span>
     <select class="act">    
@@ -39,27 +39,34 @@
       let act = $('.act').val();
       let sec = $('.secondNum').val()*1 ;
       let a;
-
       if(act == '+'){
-        a= first + sec;
-      } else if(act== '-'){
-        a= first - sec;
-      }else if(act== '*'){
-        a= first * sec;
-      }else if(act== '/'){
-        a= first / sec;
-      }else if(act== ''){
-        alert('Select the action');
+            a= first + sec;
+          } else if(act== '-'){
+            a= first - sec;
+          }else if(act== '*'){
+            a= first * sec;
+          }else if(act== '/'){
+            a= first / sec;
+          }else if(act== ''){
+            alert('Select the action');
+          }
+     
+      if($.isNumeric(a)){
+        $('.result').val(a);
+      }else{
+        alert('error');
       }
-      $('.result').val(a);
     })
 
     $(function() {
-    $('.clear').click(function(){
-      $('input').val('');
-      $('select').val('');
+      $('.clear').click(function(){
+        $('input').val('');
+        $('select').val('');
+      });
     });
-  });
+
+
+  
   </script>
 
 </body>
